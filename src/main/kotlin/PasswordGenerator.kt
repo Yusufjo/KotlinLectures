@@ -218,5 +218,6 @@ val upper="ABCDE"
     val i2=(0 until upper.length).random()
     val i3=(lower.indices).random()
     val i4=(lower.indices).random()
-    ""+upper[i1]+upper[i2]+lower[i3]+lower[i4]
+    val sifre132=""+upper[i1]+upper[i2]+lower[i3]+lower[i4]
+
 }
