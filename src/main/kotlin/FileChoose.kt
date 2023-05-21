@@ -18,7 +18,7 @@ fun main(args: Array<String>) {
         }
 
         "2" -> {
-            print("Hangi dosyayı açmak istersiniz?:")
+            print("Hangi klasörü açmak istersiniz?:")
             val inputfile = readln().lowercase()
 
             if (inputfile == "müzikler") {
@@ -88,10 +88,15 @@ fun main(args: Array<String>) {
                         print("Eklemek istediğiniz Dosyanın adını yazınız:")
                         val input2i2 = readln()
                         if (input2i2.contains(".mp4"))
+                        {
                             filmler.add(input2i2)
+                            print("<$input2i2> eklendi..\nDosyalar:" + filmler)
+                        }
                         else
+                        {
                             muzikler.add(input2i2 + ".mp4")
-                        print("Dosyalar:" + filmler)
+                            print("<$input2i2.mp4> eklendi..\nDosyalar:" + filmler)
+                        }
 
                     }
 
@@ -125,11 +130,15 @@ fun main(args: Array<String>) {
                     "2" -> {
                         print("Eklemek istediğiniz Dosyanın adını yazınız:")
                         val input2i2 = readln()
-                        if (input2i2.contains(".jpg"))
+                        if (input2i2.contains(".jpg")){
                             resimler.add(input2i2)
+                            println("<$input2i2> dosyası eklendi.\n" +
+                                    "Dosyalar: $resimler")
+                        }
                         else
-                            resimler.add(input2i2 + ".jpg")
-                        print("Dosyalar:" + resimler)
+                        { resimler.add(input2i2 + ".jpg")
+                        print("<$input2i2.jpg> dosyası eklendi.\n"+
+                                "Dosyalar:" + resimler) }
 
                     }
 
@@ -139,6 +148,7 @@ fun main(args: Array<String>) {
 
                 }
             }
+            else print("Böyle bir Klasör bulunmamaktadır")
         }
 
         "3" -> {
