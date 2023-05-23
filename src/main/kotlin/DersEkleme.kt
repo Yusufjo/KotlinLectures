@@ -34,13 +34,13 @@ fun main(args: Array<String>) {
         "18. yy ingiliz romanı",
         "kısa öykü"
     )
-    val YusufDersler = mutableListOf("mat-2", "fizik-1", "data structures")
+    val YusufDersler = mutableListOf("Mat-2","fizik-1", "data structures")
     val NurtenDersler = mutableListOf("mat-2", "fizik-2", "statik-1, dinamik-1")
     val OmerDersler = mutableListOf("çeviri Uygulamaları", "eski ve ortaçağ ingiliz edebiyatı")
 
-    val YusufAlinanDersler = mutableListOf("Mat-1", "Digital Design", "Computer Programming-1")
-    val NurtenAlinanDersler = mutableListOf("Mat-1", "Fizik-1", "Diferansiyel Denklemler")
-    val OmerAlinanDersler = mutableListOf("Dilbilime Giriş", "İngiliz Kültürü")
+    val YusufVerilenDersler = mutableListOf("mat-1","digital Design", "computer programming-1")
+    val NurtenVerilenDersler = mutableListOf("mat-1", "fizik-1", "diferansiyel denklemler")
+    val OmerVerilenDersler = mutableListOf("dilbilime giriş", "ingiliz kültürü")
 
     print("Kullanıcı adınız:")
     //  val Kull = readln()
@@ -54,17 +54,23 @@ fun main(args: Array<String>) {
     when (input) {
         "1" -> {//if (Kull == usernick[0] && Sifre == userpass[0])
             println("Alınabilecek Dersler: ")
-            for (kalandersler1 in LessonBil)
-                if (kalandersler1 !in YusufDersler && kalandersler1 !in YusufAlinanDersler)
-                    println(kalandersler1)
+            val AlDerslerYusuf = LessonBil.subtract(YusufVerilenDersler).subtract(YusufDersler)
+            println(AlDerslerYusuf)
             println("Hangi dersleri eklemek istediğinizi yazınız:")
             val derssecme = readln().lowercase()
             if (YusufDersler.contains(derssecme))
                 println("Bu dersi zaten almışsınız.")
             else {
-                YusufDersler.add(derssecme)
-                print("Mevcut Dersleriniz: $YusufDersler")
+                val eklenendersler = derssecme.split(",")
+                YusufDersler.addAll(eklenendersler)
+                if (YusufDersler.size > 4)
+                    println("Maksimum 4 adet ders seçebilirsiniz.")
+                else
+                    if (derssecme.contains("2") && !YusufVerilenDersler.contains("1"))
+                        print("$derssecme 1 Dersini tamamlamadan 2. dersi alamazsınız.")
+                    else print("Ders Seçiminiz Başarılı Olarak Eklendi.\nMevcut Dersleriniz: $YusufDersler")
             }
+
         }
 
 
