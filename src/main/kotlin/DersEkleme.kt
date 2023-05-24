@@ -34,11 +34,11 @@ fun main(args: Array<String>) {
         "18. yy ingiliz romanı",
         "kısa öykü"
     )
-    val YusufDersler = mutableListOf("Mat-2","fizik-1", "data structures")
+    val YusufDersler = mutableListOf("mat-2", "fizik-1", "data structures")
     val NurtenDersler = mutableListOf("mat-2", "fizik-2", "statik-1, dinamik-1")
     val OmerDersler = mutableListOf("çeviri Uygulamaları", "eski ve ortaçağ ingiliz edebiyatı")
 
-    val YusufVerilenDersler = mutableListOf("mat-1","digital Design", "computer programming-1")
+    val YusufVerilenDersler = mutableListOf("mat-1", "digital design", "computer programming-1")
     val NurtenVerilenDersler = mutableListOf("mat-1", "fizik-1", "diferansiyel denklemler")
     val OmerVerilenDersler = mutableListOf("dilbilime giriş", "ingiliz kültürü")
 
@@ -50,8 +50,7 @@ fun main(args: Array<String>) {
     //if (Kull == usernick[0] && Sifre == userpass[0]||Kull == usernick[1] && Sifre == userpass[1]||Kull == usernick[2] && Sifre == userpass[2]) {
     println("Giriş başarılı..\n\n")
     print("1- Ders Ekleme\n2- Ders Çıkarma\n3- Çıkış\n")
-    val input = readln()
-    when (input) {
+    when (readln()) {
         "1" -> {//if (Kull == usernick[0] && Sifre == userpass[0])
             println("Alınabilecek Dersler: ")
             val AlDerslerYusuf = LessonBil.subtract(YusufVerilenDersler).subtract(YusufDersler)
@@ -63,18 +62,25 @@ fun main(args: Array<String>) {
             else {
                 val eklenendersler = derssecme.split(",")
                 YusufDersler.addAll(eklenendersler)
-                if (YusufDersler.size > 4)
+                if (eklenendersler.size > 4)
                     println("Maksimum 4 adet ders seçebilirsiniz.")
+                else if (eklenendersler.size < 2)
+                    println("Minimum 2 ders seçebilirsiniz.")
                 else
-                    if (derssecme.contains("2") && !YusufVerilenDersler.contains("1"))
-                        print("$derssecme 1 Dersini tamamlamadan 2. dersi alamazsınız.")
-                    else print("Ders Seçiminiz Başarılı Olarak Eklendi.\nMevcut Dersleriniz: $YusufDersler")
+                    if (derssecme.endsWith("2") && !YusufVerilenDersler.contains(derssecme.substring(0, 3)))
+                        print("1.sini tamamlamadığınız derslerin 2.sini alamazsınız.")
+                    else print("$eklenendersler Başarılı Olarak Eklendi.\nMevcut Dersleriniz: $YusufDersler")
             }
-
+           // else if (Kull == usernick[0] && Sifre == userpass[0]
         }
 
 
-        "2" -> {
+        "2" -> {//if (Kull == usernick[0] && Sifre == userpass[0])
+            println("Çıkartabileceğiniz dersler: $YusufDersler\n Hangi dersleri çıkarmak istediğinizi yazın:")
+            val inputCikar= readln().lowercase()
+            val InputCikarCok=inputCikar.split(",")
+            YusufDersler.removeAll(InputCikarCok)
+            println("$YusufDersler\nProgram sonlandırılıyor...")
 
         }
 
