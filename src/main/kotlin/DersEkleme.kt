@@ -41,6 +41,7 @@ fun main(args: Array<String>) {
     val YusufVerilenDersler = mutableListOf("mat-1", "digital design", "computer programming-1")
     val NurtenVerilenDersler = mutableListOf("mat-1", "fizik-1", "diferansiyel denklemler")
     val OmerVerilenDersler = mutableListOf("dilbilime giriş", "ingiliz kültürü")
+    var DersN = LessonMak[0]
 
     print("Kullanıcı adınız:")
     val Kull = readln()
@@ -82,24 +83,38 @@ fun main(args: Array<String>) {
                     println(AlNurtenDersler)
                     println("Hangi Dersleri Eklemek İstediğinizi Yazınız: ")
                     val DersSecmeN = readln().lowercase()
+
                     if (NurtenDersler.contains(DersSecmeN)) {
                         println("Bu dersi zaten almışsınız.")
                     } else {
                         val EklenenDerslerN = DersSecmeN.split(",")
                         NurtenDersler.addAll(EklenenDerslerN)
+
                         if (EklenenDerslerN.size > 4)
                             println("Minimum 4 ders seçmelisiniz.")
                         else if (EklenenDerslerN.size < 2)
                             println("Minimum 2 ders seçmelisiniz.")
                         else
-                            if (EklenenDerslerN.contains("mat-2") && !NurtenVerilenDersler.contains("mat-1") || EklenenDerslerN.contains(
-                                    "fizik-2"
-                                ) && !NurtenVerilenDersler.contains("fizik-1") || EklenenDerslerN.contains("statik-2") && !NurtenVerilenDersler.contains(
-                                    "statik-1"
-                                ) || EklenenDerslerN.contains("dinamik-2") && !NurtenVerilenDersler.contains("dinamik-1")
-                            )
-                                print("1.sini tamamlamadığınız derslerin 2.sini alamazsınız.")
-                            else println("$EklenenDerslerN Başarılı olarak eklendi.\nMevcut Dersleriniz: $NurtenDersler")
+                            for (kontrol2 in EklenenDerslerN) {
+                                for (kontrol in NurtenVerilenDersler) {
+                                    if (!kontrol2.substring(0, kontrol2.length - 1).contains(kontrol))
+                                    {DersN = kontrol2
+                                        }
+                                }
+
+                            }
+                        print("${DersN.substring(0, DersN.length - 1)}2 dersini ${DersN.substring(0, DersN.length - 1
+                                        )
+                                    }1 dersini tamamlamadığınız için alamazsınız.")
+
+                        if (EklenenDerslerN.contains("mat-2") && !NurtenVerilenDersler.contains("mat-1") || EklenenDerslerN.contains(
+                                "fizik-2"
+                            ) && !NurtenVerilenDersler.contains("fizik-1") || EklenenDerslerN.contains("statik-2") && !NurtenVerilenDersler.contains(
+                                "statik-1"
+                            ) || EklenenDerslerN.contains("dinamik-2") && !NurtenVerilenDersler.contains("dinamik-1")
+                        )
+                            print("1.sini tamamlamadığınız derslerin 2.sini alamazsınız.")
+                        else println("$EklenenDerslerN Başarılı olarak eklendi.\nMevcut Dersleriniz: $NurtenDersler")
                     }
                 } else if (Kull == usernick[2] && Sifre == userpass[2]) {
                     println("Alınabilecek Dersler: ")

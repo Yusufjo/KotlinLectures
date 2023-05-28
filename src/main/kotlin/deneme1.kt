@@ -1,8 +1,12 @@
 fun main(args: Array<String>) {
-    val numbers = mutableListOf(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
-    numbers.shuffle()
-
-     // Basamakları karıştır
-    val result = numbers.take(8) // İlk 8 basamağı birleştir
-    println(result)
+    val list = mutableListOf("naber", "bilmem senden", "hesapla", "10 harf")
+    for (sayi in list) {
+        if (sayi.contains("hesa"))
+            print("${sayi.substring(0, sayi.length - 1)}2 sayısında hesapla vardır.")
+    }
+    val yenilist = listOf(1, 2, 3, 5)
+    var toplamasyi = 0
+    for (sayi in yenilist)
+        toplamasyi += sayi
+    println(toplamasyi)
 }
