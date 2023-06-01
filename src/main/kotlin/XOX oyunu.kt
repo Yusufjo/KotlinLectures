@@ -21,8 +21,8 @@ fun main(args: Array<String>) {
     println(satir2)
     println(satir3)
 
-    println("Kullanıcı1: X ya da O harflarinden birisini yazınız:")
-    val inputXorO = readln().uppercase().substring(0, 1)
+
+    val inputXorO =("x")
     println("Yazmak istediğiniz harfi satır ve sütun sırasına göre ',' ile ayırarak yazınız.")
     val inputKonum = readln()
     when (inputKonum) {
@@ -43,8 +43,8 @@ fun main(args: Array<String>) {
     println(satir2)
     println(satir3)
 
-    println("Kullanıcı2: X ya da O harflarinden birisini yazınız:")
-    val inputXorO1 = readln().uppercase().substring(0, 1)
+
+    val inputXorO1 = ("o")
     println("Yazmak istediğiniz harfi satır ve sütun sırasına göre ',' ile ayırarak yazınız.")
     val inputKonum1 = readln()
     when (inputKonum1) {
@@ -65,8 +65,8 @@ fun main(args: Array<String>) {
     println(satir2)
     println(satir3)
 
-    println("Kullanıcı1: X ya da O harflarinden birisini yazınız:")
-    val inputXorO2 = readln().uppercase().substring(0, 1)
+
+    val inputXorO2 =("x")
     println("Yazmak istediğiniz harfi satır ve sütun sırasına göre ',' ile ayırarak yazınız.")
     val inputKonum2 = readln()
     when (inputKonum2) {
@@ -86,14 +86,14 @@ fun main(args: Array<String>) {
     println(satir2)
     println(satir3)
 
-    println("Kullanıcı2: X ya da O harflarinden birisini yazınız:")
-    val inputXorO3 = readln().uppercase().substring(0, 1)
+
+    val inputXorO3 =("o")
     println("Yazmak istediğiniz harfi satır ve sütun sırasına göre ',' ile ayırarak yazınız.")
     val inputKonum3 = readln()
     when (inputKonum3) {
         "1,1" -> sutun11.add(inputXorO3)
         "1,2" -> sutun12.add(inputXorO3)
-        "1,3" -> sutun13.add(inputXorO)
+        "1,3" -> sutun13.add(inputXorO3)
 
         "2,1" -> sutun21.add(inputXorO3)
         "2,2" -> sutun22.add(inputXorO3)
@@ -102,6 +102,112 @@ fun main(args: Array<String>) {
         "3,1" -> sutun31.add(inputXorO3)
         "3,2" -> sutun32.add(inputXorO3)
         "3,3" -> sutun33.add(inputXorO3)
+    }
+    println(satir1)
+    println(satir2)
+    println(satir3)
+
+
+
+    val inputXorO4 =("x")
+    println("Yazmak istediğiniz harfi satır ve sütun sırasına göre ',' ile ayırarak yazınız.")
+    val inputKonum4 = readln()
+    when (inputKonum4) {
+        "1,1" -> sutun11.add(inputXorO4)
+        "1,2" -> sutun12.add(inputXorO4)
+        "1,3" -> sutun13.add(inputXorO4)
+
+        "2,1" -> sutun21.add(inputXorO4)
+        "2,2" -> sutun22.add(inputXorO4)
+        "2,3" -> sutun23.add(inputXorO4)
+
+        "3,1" -> sutun31.add(inputXorO4)
+        "3,2" -> sutun32.add(inputXorO4)
+        "3,3" -> sutun33.add(inputXorO4)
+    }
+    println(satir1)
+    println(satir2)
+    println(satir3)
+
+
+    val inputXorO5 =("o")
+    println("Yazmak istediğiniz harfi satır ve sütun sırasına göre ',' ile ayırarak yazınız.")
+    val inputKonum5 = readln()
+    when (inputKonum5) {
+        "1,1" -> sutun11.add(inputXorO5)
+        "1,2" -> sutun12.add(inputXorO5)
+        "1,3" -> sutun13.add(inputXorO5)
+
+        "2,1" -> sutun21.add(inputXorO5)
+        "2,2" -> sutun22.add(inputXorO5)
+        "2,3" -> sutun23.add(inputXorO5)
+
+        "3,1" -> sutun31.add(inputXorO5)
+        "3,2" -> sutun32.add(inputXorO5)
+        "3,3" -> sutun33.add(inputXorO5)
+    }
+    println(satir1)
+    println(satir2)
+    println(satir3)
+
+
+    val inputXorO6 =("x")
+    println("Yazmak istediğiniz harfi satır ve sütun sırasına göre ',' ile ayırarak yazınız.")
+    val inputKonum6 = readln()
+    when (inputKonum6) {
+        "1,1" -> sutun11.add(inputXorO6)
+        "1,2" -> sutun12.add(inputXorO6)
+        "1,3" -> sutun13.add(inputXorO6)
+
+        "2,1" -> sutun21.add(inputXorO6)
+        "2,2" -> sutun22.add(inputXorO6)
+        "2,3" -> sutun23.add(inputXorO6)
+
+        "3,1" -> sutun31.add(inputXorO6)
+        "3,2" -> sutun32.add(inputXorO6)
+        "3,3" -> sutun33.add(inputXorO6)
+    }
+    println(satir1)
+    println(satir2)
+    println(satir3)
+
+
+    val inputXorO7 =("o")
+    println("Yazmak istediğiniz harfi satır ve sütun sırasına göre ',' ile ayırarak yazınız.")
+    val inputKonum7 = readln()
+    when (inputKonum7) {
+        "1,1" -> sutun11.add(inputXorO7)
+        "1,2" -> sutun12.add(inputXorO7)
+        "1,3" -> sutun13.add(inputXorO7)
+
+        "2,1" -> sutun21.add(inputXorO7)
+        "2,2" -> sutun22.add(inputXorO7)
+        "2,3" -> sutun23.add(inputXorO7)
+
+        "3,1" -> sutun31.add(inputXorO7)
+        "3,2" -> sutun32.add(inputXorO7)
+        "3,3" -> sutun33.add(inputXorO7)
+    }
+    println(satir1)
+    println(satir2)
+    println(satir3)
+
+
+    val inputXorO8 =("x")
+    println("Yazmak istediğiniz harfi satır ve sütun sırasına göre ',' ile ayırarak yazınız.")
+    val inputKonum8 = readln()
+    when (inputKonum8) {
+        "1,1" -> sutun11.add(inputXorO8)
+        "1,2" -> sutun12.add(inputXorO8)
+        "1,3" -> sutun13.add(inputXorO8)
+
+        "2,1" -> sutun21.add(inputXorO8)
+        "2,2" -> sutun22.add(inputXorO8)
+        "2,3" -> sutun23.add(inputXorO8)
+
+        "3,1" -> sutun31.add(inputXorO8)
+        "3,2" -> sutun32.add(inputXorO8)
+        "3,3" -> sutun33.add(inputXorO8)
     }
     println(satir1)
     println(satir2)

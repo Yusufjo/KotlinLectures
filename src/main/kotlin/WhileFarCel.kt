@@ -6,10 +6,11 @@ fun main(args: Array<String>) {
         val Celcius = readln().lowercase()
         if (Celcius == "q") {
             print("Program sonlandırılıyor..")
-            break
+            deger=2
         }
+        else{
         val number = Celcius.toInt()
         val fahrenheit = 9.0 / 5 * number + 32
-        println(fahrenheit)
+        println(fahrenheit)}
     }
 }
