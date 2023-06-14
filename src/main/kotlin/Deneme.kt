@@ -1,13 +1,30 @@
 fun main(args: Array<String>) {
-    val liste = mutableListOf(1, 23, 4, 5,4,8,82,16,5489,58,53,754,123,56,)
-    var degiskenDeger = liste[0]
-    for (kontrol in liste) {
-        if (kontrol < 3) {
-            degiskenDeger = kontrol
+    val elements = listOf("A", "B", "C", "D") // Eleman listesi
+    val selectedElement = elements.random() // Rastgele seçilen bir eleman
+
+    var count = 0
+    var selectedElementCount = 0
+
+    while (count < elements.size) {
+        if (selectedElementCount < 4) {
+            println(selectedElement)
+            selectedElementCount++
+        } else {
+            for (element in elements) {
+                if (element != selectedElement) {
+                    println(element)
+                    count++
+                }
+            }
         }
     }
-    println(degiskenDeger)
-    val index = liste.indexOf(754)
-    println("Index of 754: $index")
-    println(liste.indexOf(754))
 }
+
+
+
+
+
+
+
+
+
