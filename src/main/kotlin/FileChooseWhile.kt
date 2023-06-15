@@ -32,7 +32,8 @@ fun main(args: Array<String>) {
                 deger2++
                 deger3++
                 deger++
-            } else {deger++
+            } else {deger++ // buraya geldiğinde ve başka istekler varsa burayı hiç saymayacak ve fora geri dönecek ama yoksa
+               // burayı kullanacak örnek olarak 10 soru istiyoruz ilki 4 ve sonra 2 var
                 if (hangiIslemiNeKadarIstiyor != deger2)  {
                     val islem = islemlistesi.random()
                     println("$sayi1$islem$sayi2=?:")
