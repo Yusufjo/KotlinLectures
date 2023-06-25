@@ -111,6 +111,7 @@ fun main(args: Array<String>) {
                         } else {
                             println(dramaFilmler[inputFgeri.toInt() - 1] + " Açılıyor..")
                             degerGeri++
+                            menuGeri++
                         }
                     } else if (inputFMenu == "2") {
                         println("BAĞIMSIZ FİLMLER$bagimsizFilmler\nGeri için (q)'e basınız.")

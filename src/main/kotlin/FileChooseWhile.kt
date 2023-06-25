@@ -10,12 +10,12 @@ fun main(args: Array<String>) {
     var deger = 0
     var deger3=0
     print("Kaç adet soru istiyorsunuz?:")
-    val kacSoruInput = readln().toInt()
-    print("Kaç adet toplama, çarpma,çıkarma, bölme istediğinizi yazınız:")
+    val kacSoruInput = readln().toInt()//10
+    print("Kaç adet toplama, çarpma,çıkarma, bölme istediğinizi yazınız:")//2-,2+
     val hangiIslemKacKere = readln().split(",")
     val hangiIslemKacKereListesi = mutableListOf<String>()
     hangiIslemKacKereListesi.addAll(hangiIslemKacKere)
-    for (i in hangiIslemKacKereListesi) {
+    for (i in hangiIslemKacKere) {
         i.substring(0, i.length - (i.length - 1))//kaç adet olduklarını ayırdım
         i.substring(1, i.length)//hangi işlemi istediklerini ayırdım
         var deger = 0
