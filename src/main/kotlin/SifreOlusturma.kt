@@ -13,7 +13,7 @@ fun main(args: Array<String>) {
         ,"f","g","h","j","k","l","ş","i","z","x","c","v","b","n","m","ö","ç")
     val BuyukHarfListesi= listOf("Q","W","E","R","T","Y","U","I","O","P","Ğ","Ü","A","S","D"
         ,"F","G","H","J","K","L","Ş","İ","Z","X","C","V","B","N","M","Ö","Ç")
-val NoktalaIsaretleriListesi= listOf("!","^","+","%","&","/","(",")","=","?","_","-","*",".")
+    val NoktalaIsaretleriListesi= listOf("!","^","+","%","&","/","(",")","=","?","_","-","*",".")
     val SayiListesi= listOf("1","2","3","4","5","6","7","8","9","0")
     val tumliste= mutableListOf<String>()
     tumliste.addAll(BuyukHarfListesi)
@@ -37,10 +37,10 @@ val NoktalaIsaretleriListesi= listOf("!","^","+","%","&","/","(",")","=","?","_"
 
 
 
-        for (kucukharf in 1..KacAdetK) {
+    for (kucukharf in 1..KacAdetK) {
         sifre.add(KucukHarfListesi.random())
-            Deger++
-        }
+        Deger++
+    }
 
 
     for (buyukharf in 1..KacAdetB) {
@@ -49,19 +49,22 @@ val NoktalaIsaretleriListesi= listOf("!","^","+","%","&","/","(",")","=","?","_"
     }
 
 
-            for (Noktalama in 1..KacAdetN) {
-                sifre.add(NoktalaIsaretleriListesi.random())
-                Deger++
-            }
+    for (Noktalama in 1..KacAdetN) {
+        sifre.add(NoktalaIsaretleriListesi.random())
+        Deger++
+    }
 
 
-            for (Sayi in 1..KacAdetS) {
-                sifre.add(SayiListesi.random())
-                Deger++
-            }
+    for (Sayi in 1..KacAdetS) {
+        sifre.add(SayiListesi.random())
+        Deger++
+    }
+if (Deger<SifreSayisi) {
+    for (geriKalan in 1..SifreSayisi - Deger) {
+        sifre.add(tumliste.random())
+    }
+}
+
     sifre.shuffle()
-
-
-
-    println(sifre.joinToString(""))
+    println("Oluşturulan Şifre:"+sifre.joinToString(""))
 }
